@@ -1,6 +1,5 @@
 'use strict';
 
-var browserSync     = require('browser-sync');
 var config          = require('../config');
 var gulp            = require('gulp');
 var path            = require('path');
