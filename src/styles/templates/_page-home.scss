@@ -1,0 +1,126 @@
+.page-home {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: background 2s ease-in-out;
+
+    .wrapper {
+        height: 100%;
+        position: relative;
+    }
+
+    .logo-info {
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    .ab-logo {
+        display: block;
+        height: 100%;
+        margin: 0 auto em(30);
+        width: 25%;
+    }
+
+    .ab-logo__shadow,
+    .ab-logo__letter,
+    .ab-logo__lined-letter {
+        transition: fill 2s ease-in-out;
+    }
+
+    .ab-logo__shadow {
+        fill: $eclipse;
+    }
+
+    .ab-logo__letter {
+        fill: $cinnabar;
+    }
+
+    .ab-logo__lined-letter {
+        fill: $gossip;
+    }
+
+    .info {
+        @include montserrat;
+        color: $eclipse;
+        line-height: 1;
+        transition: color 2s ease-in-out;
+
+        h1 {
+            font-size: em(30);
+            line-height: 1;
+            margin-bottom: em(30, 30);
+        }
+
+        h2 {
+            font-size: em(24);
+            line-height: 1;
+        }
+
+        a {
+            color: $eclipse;
+            transition: color 2s ease-in-out;
+        }
+    }
+
+    &.grey {
+        background: $eclipse;
+
+        .ab-logo__shadow {
+            fill: $lemon;
+        }
+
+        .ab-logo__letter {
+            fill: $gossip;
+        }
+
+        .ab-logo__lined-letter {
+            fill: $cinnabar;
+        }
+
+        .info {
+            color: $lemon;
+
+            a {
+                color: $lemon;
+            }
+        }
+    }
+
+    &.green {
+        background: $gossip;
+
+        .ab-logo__shadow {
+            fill: $eclipse;
+        }
+
+        .ab-logo__letter {
+            fill: $lemon;
+        }
+
+        .ab-logo__lined-letter {
+            fill: $cinnabar;
+        }
+    }
+
+    &.yellow {
+        background: $lemon;
+
+        .ab-logo__shadow {
+            fill: $eclipse;
+        }
+
+        .ab-logo__letter {
+            fill: $cinnabar;
+        }
+
+        .ab-logo__lined-letter {
+            fill: $gossip;
+        }
+    }
+}
