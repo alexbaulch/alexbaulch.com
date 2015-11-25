@@ -14,6 +14,8 @@ gulp.task('watch', ['scripts', 'styles'], function() {
     gulp.watch(path.join(config.styles.src, '**', '*.scss'), ['styles']);
 
     // Watch .js files
-    gulp.watch(path.join(config.scripts.src, '**', '*.js'), ['jshint']);
+    // gulp.watch(['shared/**/*.js', path.join(config.scripts.src, '**', '*.js'), path.join('components', '**', '*.js')], ['jshint']);
 
+    // Watch .html files
+    gulp.watch(path.join('views', '**', '*.html'), browserSync.reload);
 });

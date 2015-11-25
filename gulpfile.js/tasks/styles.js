@@ -22,6 +22,6 @@ gulp.task('styles', function() {
         .pipe(config.production ? util.noop() : sourcemaps.write())
         .pipe(config.production ? minifyCss() : util.noop())
         .pipe(gulp.dest(path.join(config.styles.dist)))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(config.production ? util.noop() : browserSync.reload({ stream: true }));
 
 });

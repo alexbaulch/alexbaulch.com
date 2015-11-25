@@ -12,10 +12,9 @@ gulp.task('jshint', function() {
             path.join(config.scripts.src, '**', '*.js'),
             '!' + path.join(config.scripts.src, 'libs', '*.js'),
             '!' + path.join(config.scripts.src, 'plugins', '*.js'),
-            '!' + path.join(config.scripts.src, '*.min.js'),
-            '!' + path.join(config.scripts.src, 'modernizr.js')
+            '!' + path.join(config.scripts.src, '*.min.js')
         ])
-        .pipe(jshint(config.jshint))
+        .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('jshint-stylish'));
 
 });
