@@ -13,7 +13,10 @@ var util         = require('gulp-util');
 
 gulp.task('styles', function() {
 
-    return gulp.src(path.join(config.styles.src, '*.scss'))
+    return gulp.src([
+            path.join(config.styles.src, '*.scss'),
+            'component/**/*.scss'
+        ])
         .pipe(config.production ? util.noop() : sourcemaps.init())
             .pipe(sass(config.sass))
                 .on('error', errorHandler)

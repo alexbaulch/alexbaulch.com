@@ -1,5 +1,4 @@
 'use strict';
-
 var browserSync     = require('browser-sync');
 var buffer          = require('vinyl-buffer');
 var config          = require('../config');
@@ -19,7 +18,8 @@ var bundler = browserify({
     debug: !config.production,
     cache: {},
     packageCache: {},
-    fullPaths: true
+    fullPaths: true,
+    transform: ['reactify']
 });
 
 // What Browserify should do when building the bundle

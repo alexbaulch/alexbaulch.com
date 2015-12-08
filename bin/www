@@ -4,8 +4,10 @@
  * Module dependencies.
  */
 
+require('../server');
+
 var app = require('../server/app');
-var debug = require('debug')('downs-fc:server');
+var debug = require('debug')('alexbaulch:server');
 var http = require('http');
 
 /**
